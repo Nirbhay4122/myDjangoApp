@@ -1,0 +1,52 @@
+body {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+.main {
+    background-color: lightgreen;
+    width: fit-content;
+    height: 200px;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+  
+.active {
+    color: white;
+    background-color: #04AA6D;
+}
+
+.form-temp {
+    border: 1px solid #000;
+    width: 200px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.form-temp input {
+    padding: 5px;
+}

@@ -1,0 +1,19 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <ul>
+        <li><a class="{% if request.path == '/' %} active {% endif %}" href="/">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        {% url 'about_us' as about %}
+        <li><a class="{% if request.path == about %} active {% endif %}" href="{{ about }}">About</a></li>
+    </ul>
+

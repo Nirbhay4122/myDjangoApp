@@ -1,0 +1,40 @@
+{% include "header.html" %}
+
+{% comment %} <form class="form-temp" method="get"> {% endcomment %}
+<form class="form-temp" method="post">
+    {% csrf_token %}
+    <label for="num1">First name:</label><br>
+    <input type="text" id="num1" value="{{num1}}" name="num1"><br>
+    <label for="num2">Last name:</label><br>
+    <input type="text" id="num2" value="{{num2}}" name="num2"><br><br>
+    <input type="submit" value="Submit">
+    {% comment %} <input type="text" value="{{output}}"> {% endcomment %}
+    <p>The result is: <b>{{ output }}</b></p>
+
+</form> 
+
+    <h1>Welcome to home page.</h1>
+    <div class="main">{{ info }}</div>
+    <br>
+    <div>
+        {% for sName in studentList %}
+            {{ forloop.counter }} {{ sName }}
+        {% endfor %}
+    </div>
+    <br>
+    <table border='1' cellpadding='10'>
+        <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+        </tr>
+        {% for studenDe in studentDetails %}
+        <tr>
+            <td> {{ studenDe.name }} </td>
+            <td> {{ studenDe.mobileNo }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    {% comment %} {{ request.path }} {% endcomment %}
+</body>
+</html>
